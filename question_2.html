@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <script src="scope.js"></script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background: url(https://cdn.dribbble.com/users/1770290/screenshots/6183149/bg_79.gif) no-repeat center/cover;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        table {
+            width: 100%;
+            font-size: 2vw;
+            font-family: 'Pacifico', cursive;
+            padding-top: 20px;
+        }
+
+        .a {
+            text-align: right;
+
+        }
+
+        .a a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.6vw;
+        }
+
+        .a a:hover {
+            color: red;
+            background: rgb(230, 164, 224);
+        }
+
+        .head {
+            font-size: 2vw;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+        }
+
+
+        p {
+            text-align: center;
+            font-size: 2vw;
+            font-family: fantasy;
+        }
+
+        ol{
+            align-items: center;
+            padding-left: 40px;
+            font-family:monospace;
+            border: solid;
+            background:plum;
+        }
+        li{
+            padding-bottom: 30px;
+            margin: 10px;
+            width: 100%;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                Name: PRERNA PATWAL<br>
+                Roll Number: 2006215
+            </td>
+            <td class="a">
+                <a href="">GO TO NEXT QUESTION =>>></a><br>
+                <a href=""> <<<= GO TO PREVIOUS QUESTION</a><br>
+                <a href=""><b>SHOW CODE</b></a>
+            </td>
+        </tr>
+    </table>
+    <div class="head">
+        ASSIGNMENT 5
+    </div>
+    <div class="head">
+        Question 2: Show the Scope of variables in JS using HTML page
+    </div>
+    <p>
+        Some examples of scope of variable are as follows:
+    </p>
+    <ol>
+        <li>
+            var car="in global"; console.log("global: car=" + car);var a = function(){
+            var car = "inside a";
+            console.log("a: car = "+ car);
+
+            b();
+            }
+            var b=function(){
+            var car = "inside b";
+            console.log("b: car = "+ car);
+
+            }
+            a();
+
+            <b>
+                OUTPUT:
+            </b>
+            global: car=in global
+            a: car = inside a
+            b: car = inside b
+        </li>
+        <li>
+            var message = 'Hi';
+
+            function say() {
+            var message = 'Hello';
+            console.log('message');
+            }
+
+            say();
+            console.log(message);
+            <b>
+                OUTPUT:
+            </b>
+            message//
+            Hi
+        </li>
+    </ol>
+</body>
+
+</html>
